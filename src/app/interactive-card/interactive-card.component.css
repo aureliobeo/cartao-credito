@@ -1,0 +1,98 @@
+.container {
+  display: flex;
+}
+
+.container-card {
+  padding-left: 65%;
+  padding-top: 30%;
+}
+
+.input-name-number-card {
+  width: 355px;
+}
+
+.card-padding {
+  padding-bottom: 16px;
+}
+
+.input-date-number {
+  display: -webkit-box;
+}
+
+.input-date {
+  width: 70px;
+  margin-right: 16px;
+}
+
+.input-cvc {
+  display: grid;
+}
+
+.style-buttom {
+  width: 370px;
+  border-radius: 50px;
+}
+
+.number-front-card {
+  font-size: 48px;
+}
+
+.card-redit-front {
+  padding-top: 30%;
+  color: aliceblue;
+}
+
+.card-redit-back {
+  padding-top: 22%;
+  color: aliceblue;
+}
+
+.name-data-card-front{
+  font-size: 18px;
+}
+
+.name-card-front{
+  padding-right: 52%;
+}
+
+.name-card-back{
+  padding-left: 90%;
+}
+
+.card-front {
+  position: absolute;
+  top: 26%;
+  left: 25%;
+  background-image: url("../../assets/images/bg-card-front.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 264px;
+  width: 430px;
+  border-radius: 16px;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-back {
+  position: absolute;
+  top: 65%;
+  left: 25%;
+  background-image: url("../../assets/images/bg-card-back.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 264px;
+  width: 430px;
+  border-radius: 16px;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
