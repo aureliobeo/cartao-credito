@@ -1,6 +1,6 @@
 import { CommonModule, NgIf } from "@angular/common";
 import { NgModule } from "@angular/core";
-import { FormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from '@angular/material/input';
 import { BrowserModule } from "@angular/platform-browser";
@@ -15,9 +15,14 @@ import { NzMenuModule } from "ng-zorro-antd/menu";
 import { NzInputModule } from "ng-zorro-antd/input";
 import { NzInputNumberModule } from "ng-zorro-antd/input-number";
 import { NzMessageService } from 'ng-zorro-antd/message';
+import { FrontCardComponent } from "./front-card/front-card.component";
+import { InteractiveCardComponent } from "./interactive-card.component";
+import { NzButtonModule } from "ng-zorro-antd/button";
 
 @NgModule({
     declarations: [
+        InteractiveCardComponent,
+        FrontCardComponent
     ],
     imports: [
         CommonModule,
@@ -38,11 +43,14 @@ import { NzMessageService } from 'ng-zorro-antd/message';
         NzCardModule,
         NzFormModule,
         NzInputModule,
-        NzInputNumberModule
+        NzInputNumberModule,
+        ReactiveFormsModule,
+        NzButtonModule
     ],
     providers: [
         NzMessageService
     ],
+
 })
 
 export class InteractiveModule { }
