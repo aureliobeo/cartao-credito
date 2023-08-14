@@ -18,11 +18,15 @@ import { NzMessageService } from 'ng-zorro-antd/message';
 import { FrontCardComponent } from "./front-card/front-card.component";
 import { InteractiveCardComponent } from "./interactive-card.component";
 import { NzButtonModule } from "ng-zorro-antd/button";
+import { BackCardCompoent } from "./back-card/back-card.component";
+import { FormCardComponent } from "./form-card/form-card.component";
 
 @NgModule({
     declarations: [
         InteractiveCardComponent,
-        FrontCardComponent
+        FrontCardComponent,
+        BackCardCompoent,
+        FormCardComponent
     ],
     imports: [
         CommonModule,
