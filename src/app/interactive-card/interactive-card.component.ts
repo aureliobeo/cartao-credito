@@ -22,7 +22,7 @@ export class InteractiveCardComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  valorForm?: string;
+   valorForm?: string;
 
   receberValor(valor: string) {
     this.valorForm = valor;
