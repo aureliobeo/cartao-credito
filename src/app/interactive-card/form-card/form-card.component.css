@@ -1,0 +1,22 @@
+.container-card {
+  padding-left: 65%;
+  padding-top: 30%;
+}
+
+.input-name-number-card {
+  width: 355px;
+}
+
+.input-date-number {
+  display: -webkit-box;
+}
+
+.input-date {
+  width: 70px;
+  margin-right: 16px;
+}
+
+.style-buttom {
+  width: 370px;
+  border-radius: 50px;
+}
