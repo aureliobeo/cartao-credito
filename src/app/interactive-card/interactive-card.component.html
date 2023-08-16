@@ -1,0 +1,105 @@
+<div class="container">
+  <div>
+    <img src="../../assets/images/bg-main-desktop.png" />
+    <div>
+      <nz-card class="card-front">
+        <div class="card-redit-front">
+          <span class="number-front-card">{{ numeroCartaoFront }}</span>
+          <div class="name-data-card-front">
+            <span class="name-card-front">{{ nomeCartaoFront }}</span>
+            <span>{{ dataMesFront }}/{{ dataAnoFront }}</span>
+          </div>
+        </div>
+      </nz-card>
+    </div>
+    <div>
+      <nz-card class="card-back">
+        <div class="card-redit-back">
+          <div class="name-data-card-front">
+            <span class="name-card-back">{{ cvcCartaoBack }}</span>
+          </div>
+        </div>
+      </nz-card>
+    </div>
+  </div>
+  <nz-form [formGroup]="formulario">
+    <div class="container-card">
+      <nz-form-item>
+        <nz-form-label>CARDHOLDER NAME</nz-form-label>
+        <nz-form-control>
+          <input
+            formControlName="nome"
+            class="input-name-number-card"
+            nz-input
+            placeholder="e.g. Jane Appleseed"
+            required="true"
+          />
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label>CARD NUMBER</nz-form-label>
+        <nz-form-control>
+          <input
+            required="true"
+            class="input-name-number-card"
+            nz-input
+            placeholder="e.g. Jane Appleseed"
+            type="text"
+            formControlName="numeroCartao"
+            (input)="formatarNumeroCartao()"
+            placeholder="Número do Cartão"
+            maxlength="14"
+          />
+        </nz-form-control>
+      </nz-form-item>
+      <div class="input-date-number">
+        <nz-form-item>
+          <nz-form-label>EXP. DATE (MM/YY)</nz-form-label>
+          <nz-form-control>
+            <input
+              required="true"
+              formControlName="dataMes"
+              class="input-date"
+              nz-input
+              type="text"
+              (input)="formaDataMesCartao()"
+              placeholder="MM"
+              maxlength="2"
+            />
+            <input
+              formControlName="dataAno"
+              (input)="formaDataAnoCartao()"
+              class="input-date"
+              nz-input
+              placeholder="YY"
+              required="true"
+              maxlength="2"
+            />
+          </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+          <nz-form-label>CVC</nz-form-label>
+          <nz-form-control>
+            <input
+              formControlName="cvc"
+              nz-input
+              placeholder="e.g. 123"
+              maxlength="3"
+              required="true"
+              (input)="formaCVC()"
+            />
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+
+      <button
+        class="style-buttom"
+        nz-button
+        nzType="primary"
+        (click)="formCard()"
+      >
+        Capturar Valores
+      </button>
+    </div>
+  </nz-form>
+</div>

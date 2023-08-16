@@ -10,7 +10,7 @@ import { NZ_I18N } from 'ng-zorro-antd/i18n';
 import { en_US } from 'ng-zorro-antd/i18n';
 import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { IconsProviderModule } from './icons-provider.module';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
@@ -26,6 +26,7 @@ registerLocaleData(en);
 @NgModule({
   declarations: [
     AppComponent,
+    InteractiveCardComponent
   ],
   imports: [
     BrowserModule,
@@ -44,9 +45,11 @@ registerLocaleData(en);
     InteractiveModule,
     ReactiveFormsModule,
     NzButtonModule
-
+    
   ],
-  providers: [],
+  providers: [
+    { provide: NZ_I18N, useValue: en_US }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
