@@ -5,10 +5,10 @@ import { Component, OnInit } from "@angular/core";
   template: `<div class="container">
     <div>
       <img src="../../assets/images/bg-main-desktop.png" />
-      <app-front-card></app-front-card>
-      <app-back-card></app-back-card>
+      <app-front-card [valorRecebido]="valorForm"></app-front-card>
+      <app-back-card [valorRecebido]="valorForm"></app-back-card>
     </div>
-    <app-form-card></app-form-card>
+    <app-form-card (valorBackCard)="receberValor($event)"></app-form-card>
   </div>
   `,
   styleUrls: ['./interactive-card.component.css']
@@ -20,6 +20,12 @@ export class InteractiveCardComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  valorForm?: string;
+
+  receberValor(valor: string) {
+    this.valorForm = valor;
   }
 
 }
